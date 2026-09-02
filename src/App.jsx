@@ -5,11 +5,12 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 import useTranslation from "./hooks/useTranslation";
 import { Route, Routes } from "react-router-dom";
+import Loading from "./components/layout/Loading";
 
 const Home = lazy(() => import("./components/layout/Home"));
 function App() {
   return (
-    <Suspense fallback={<h1>loading</h1>}>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
